@@ -21,7 +21,9 @@ public class ApiConfig {
                 .select()
                 .apis(RequestHandlerSelectors.any())
                 .paths(PathSelectors.any())
-                .build();
+                .build()
+                .useDefaultResponseMessages(false)
+                .apiInfo(apiInfo());
     }
     private ApiInfo apiInfo(){
         return new ApiInfo(
